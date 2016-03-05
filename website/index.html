@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway: 400,200' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/circle.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function showSettings(element){      
+            var temp = $(element).closest("li").next();
+            $(temp).toggleClass('hide show');
+        };
+  </script>
+	    
+	</head>
+  	<body>
+	  	<section id="header">
+		  	<nav class="navbar navbar-default">
+		  		<div class="container-fluid">
+		  			<!-- navbar header -->
+		  			<div class="navbar-header">
+		  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#remindme-collapse-navbar" aria-expanded="false">
+		        		<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		      			</button>
+		      			<a class="navbar-brand" href="#"><img src="img/remindme-logo.png"></a>
+		  			</div>
+		  			<!-- end navbar header -->
+
+		  			<!-- collapsed navbar -->
+		  			<div class="collapse navbar-collapse" id="remindme-collapse-navbar">
+		  				<ul class="nav navbar-nav">
+					        <li class="active"><a href="index.html">All Tasks<span class="sr-only">(current)</span></a></li>
+					        <li><a href="single-task.html">Task</a></li>
+					        <li><a href="about.html">About</a></li>
+					    </ul>
+		  			</div>
+		  			<!-- end collapsed navbar -->
+		  		</div>
+		  	</nav>
+	  	</section>
+	  	<section id="breadcrumbs">
+	  		<div class="container">
+		  		<ol class="breadcrumb">
+		  			<li><a href="index.html">All Tasks</a></li>
+				</ol>
+			</div>
+	  	</section>
+	  	<section id="card-box">
+	  		<div class="container">
+	  			<div class="card-holder">
+	  				<div class="info-box">
+	  					<div class="col-md-8 col-xs-6 personal-info">
+	  						<div class="rounded-border visible-lg">
+	  							<img class="img-circle img-responsive" src="img/grampa-big.jpg">
+	  						</div>
+                            <img class="img-circle img-responsive hidden-lg" src="img/grampa-big.jpg">
+	  						<div class="date-holder">
+	  							Mar 03, 2016 <span class="caret"></span>
+	  						</div>
+	  					</div>
+	  					<div class="col-md-4 col-xs-6 task-info">
+	  						<div class="row">
+	  							<div class="col-md-6 col-xs-6 task-status">
+	  								03
+	  								<p>done</p>
+	  							</div>
+	  							<div class="col-md-6 col-xs-6 task-status">
+	  								03
+	  								<p>undone</p>
+	  							</div>
+	  						</div>
+                            <div class="row">
+                                <div class="col-md-12 task-progress">
+                                    <div class="progress-holder">
+                                        <div class="c100 p50">
+                                        <span>50%</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="completed">completed</div>
+                                </div>
+                            </div>
+	  					</div>
+	  					<div class="clearfix"></div>
+	  				</div>
+	  			</div>
+	  		</div>
+	  	</section>
+	  	<section id="task-list">
+            <div class="container">
+                <ul class="task-list">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-home fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Pick up kids at ballet school <div class="done"></div></h4>
+                                    <div>Get Angie and Donna at Black Swan Ballet School</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-ticket fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Buy movie tickets <div class="undone"></div></h4>
+                                    <div>Buy Deadpool movie tickets for Bob, James, Jesse and Cris</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-briefcase fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Deliver Remind.me website responsive <div class="done"></div></h4>
+                                    <div>Deliver design and source-code of Remind.me site</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-gift fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Joana Birthday <div class="undone"></div></h4>
+                                    <div>Buy a beautiful gold necklace with diamonds</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-shopping-cart fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Go to Supermarket <div class="done"></div></h4>
+                                    <div>Buy pasta, rice, pizza, potatos and bananas.</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-3">
+                                <div class="icon-mini">
+                                    <i class="fa fa-home fa-3x"></i>
+                                </div>
+                            </div>
+                            <a href="single-task.html">
+                                <div class="col-md-10 col-xs-7">
+                                    <h4>Go to Laundry <div class="undone"></div></h4>
+                                    <div>Get Brian and Billy's clothes.</div>
+                                </div>
+                            </a>
+                            <div class="col-md-1 col-xs-2">
+                                <a onclick="showSettings(this)"><i class="fa fa-cog fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="settings hide">
+                        <div class="grey-row">
+                            <div class="col-md-12">
+                                <div class="pull-right settings-icon">
+                                    <i class="icon-mode_edit fa icon-2x"></i>
+                                    <i class="icon-person_add fa icon-2x"></i>
+                                    <i class="icon-share fa icon-2x"></i>
+                                    <i class="icon-attach_file fa icon-2x"></i>
+                                    <i class="icon-favorite_border fa icon-2x"></i>
+                                    <i class="fa fa-trash-o fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="add-task">
+                <a href="add-task.html" class="btn btn-default pull-right">Add Task</a>
+                </div>
+            </div>
+	  	</section>
+	  	<section id="footer">
+            <div class="container">
+                <div class="copyright">Copyright © 2016 Gabriella de Bem | Desenvolvido com <span class="fa fa-heart pulse"></span> e carinho.</div>
+            </div>
+    </section>
+	</body>
+</html>

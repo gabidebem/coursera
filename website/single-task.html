@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Raleway: 400,200' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/circle.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function showSettings(element){      
+            var temp = $(element).closest("li").next();
+            $(temp).toggleClass('hide show');
+            };
+            
+            function isSelected(e){
+                $(e).toggleClass('selected unselected');
+            };
+            
+            function changeIcon(){
+                var selected = document.getElementById("task-category").value;
+                var icon = document.getElementById("icon");
+                
+                if(selected === "Home"){
+                    $(icon).removeAttr("class");
+                    $(icon).attr("class", "fa fa-home fa-3x");
+                }
+                
+                if (selected === "Business"){
+                    $(icon).removeAttr("class");
+                    $(icon).attr("class", "fa fa-briefcase fa-3x");
+                }
+                
+                if (selected === "Shopping"){
+                    $(icon).removeAttr("class");
+                    $(icon).attr("class", "fa fa-shopping-cart fa-3x");
+                }
+                
+                if (selected === "Tickets"){
+                    $(icon).removeAttr("class");
+                    $(icon).attr("class", "fa fa-ticket fa-3x");
+                }
+                
+                if (selected === "Gifts"){
+                    $(icon).removeAttr("class");
+                    $(icon).attr("class", "fa fa-gift fa-3x");
+                }
+            };
+  </script>
+	    
+	</head>
+  	<body>
+	  	<section id="header">
+		  	<nav class="navbar navbar-default">
+		  		<div class="container-fluid">
+		  			<!-- navbar header -->
+		  			<div class="navbar-header">
+		  				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#remindme-collapse-navbar" aria-expanded="false">
+		        		<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		      			</button>
+		      			<a class="navbar-brand" href="#"><img src="img/remindme-logo.png"></a>
+		  			</div>
+		  			<!-- end navbar header -->
+
+		  			<!-- collapsed navbar -->
+		  			<div class="collapse navbar-collapse" id="remindme-collapse-navbar">
+		  				<ul class="nav navbar-nav">
+					        <li><a href="index.html">All Tasks<span class="sr-only">(current)</span></a></li>
+					        <li class="active"><a href="single-task.html">Task</a></li>
+					        <li><a href="about.html">About</a></li>
+					    </ul>
+		  			</div>
+		  			<!-- end collapsed navbar -->
+		  		</div>
+		  	</nav>
+	  	</section>
+	  	<section id="breadcrumbs">
+	  		<div class="container">
+		  		<ol class="breadcrumb">
+		  			<li><a href="index.html">All Tasks</a></li>
+                    <li><a href="single-task.html">Task</a></li>
+				</ol>
+			</div>
+	  	</section>
+        <section id="single-task">
+            <div class="container">
+                <div class="task-holder">
+                    <div class="row task-title">
+                        <div class="col-md-1 col-xs-2">
+                            <a class="white" href="index.html">
+                                <i class="icon-arrow_left fa icon-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-10 col-xs-8">
+                            <h3>Task Details</h3>
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <a class="white" href="about.html">
+                                <i class="fa fa-info-circle fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="icon-mini icon-white">
+                                <i id="icon" class="fa fa-home fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="task-category" onchange="changeIcon()" class="form-control">
+                                <option selected>Home</option>
+                                <option>Business</option>
+                                <option>Shopping</option>
+                                <option>Tickets</option>
+                                <option>Gifts</option>
+                            </select>
+                        </div>                        
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" id="task-title" value="PICK UP KIDS AT BALLET SCHOOL">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="text-control" rows="3">Get Angie and Donna at Black Swan Ballet School</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="selectpicker form-control">
+                                <option data-icon="fa fa-circle dot-done" selected>Done</option>
+                                <option data-icon="fa fa-circle dot-undone" >Undone </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Assign to</label>
+                            <div class="row photo-associated visible-lg">
+                                <div class="col-md-2">
+                                    <img onclick="isSelected(this)" class="photo-mini selected" src="img/grampa.jpg">
+                                </div>
+                                <div class="col-md-2">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/brother.jpg">
+                                </div>
+                                <div class="col-md-2">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/sister.jpg">
+                                </div>
+                                <div class="col-md-2">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/me.jpg">
+                                </div>
+                                <div class="col-md-2">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/aunt.jpg">
+                                </div>
+                            </div>
+                            <div class="row photo-associated hidden-lg">
+                                <div class="col-xs-4">
+                                    <img onclick="isSelected(this)" class="photo-mini selected" src="img/grampa.jpg">
+                                </div>
+                                <div class="col-xs-4">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/brother.jpg">
+                                </div>
+                                <div class="col-xs-4">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/sister.jpg">
+                                </div>
+                            </div>
+                            <div class="row photo-associated hidden-lg">
+                                <div class="col-xs-4">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/me.jpg">
+                                </div>
+                                <div class="col-xs-4">
+                                    <img onclick="isSelected(this)" class="photo-mini unselected" src="img/aunt.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-default btn-update btn-lg">Update Task</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container">
+                <div class="copyright">Copyright © 2016 Gabriella de Bem | Desenvolvido com <span class="fa fa-heart pulse"></span> e carinho.</div>
+            </div>
+        </section>
+	</body>
+</html>
